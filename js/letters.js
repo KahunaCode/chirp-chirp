@@ -19,14 +19,16 @@ function countLetters(counter, sample_text){
   if (sample_text.length === 0){
     return;
   }
-  console.log(sample_text[sample_text.length-1] in counter, sample_text[sample_text.length-1]);
+  //console.log(sample_text[sample_text.length-1] in counter, sample_text[sample_text.length-1]);
 
   //console.log(sample_text[sample_text.length-2]);
   if (sample_text[sample_text.length-1] in counter){
-    console.log(sample_text.length-1);
-    console.log("got it");
-    counter.sample_text[sample_text.length-1]++;
-    //sample_text = sample_text.slice(0, --sample_text);
+    //console.log(sample_text.length-1);
+    //console.log("got it");
+    var letter = sample_text[sample_text.length-1];
+    console.log(letter);
+    counter[letter]++;
+    //counter.sample_text[sample_text.length-1]++;
   }
 
   //console.log(sample_text[sample_text.length-1]);
