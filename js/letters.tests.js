@@ -1,7 +1,7 @@
 describe("The Letter Counter", function() {
-  
+
   it("should count each letter in a given string", function() {
-    
+
     var sample_text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod \
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, \
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \
@@ -18,7 +18,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
       "u" : 0,  "v" : 0,  "w" : 0,  "x" : 0,
       "y" : 0,  "z" : 0
     };
-    
+
+    var text = countLetters(counter, sample_text);
     expect(counter["a"]).toBe(29);
   });
 
