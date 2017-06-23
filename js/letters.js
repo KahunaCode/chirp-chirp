@@ -19,16 +19,38 @@ function countLetters(counter, sample_text){
   if (sample_text.length === 0){
     return;
   }
-  console.log(sample_text[sample_text.length-1].toLowerCase() in counter, sample_text[sample_text.length-1].toLowerCase());
-  if (sample_text[sample_text.length-1].toLowerCase() in counter){
+  //console.log(sample_text[sample_text.length-1].toLowerCase() in counter, sample_text[sample_text.length-1].toLowerCase());
+
+  if (counter.hasOwnProperty(sample_text[ sample_text.length-1])){
     counter[sample_text[sample_text.length-1].toLowerCase()]++;
   }
+
+  // if (sample_text[sample_text.length-1].toLowerCase() in counter){
+  //   counter[sample_text[sample_text.length-1].toLowerCase()]++;
+  // }
 
   return countLetters(counter, sample_text.slice(0, --sample_text.length));
 }
 
 
 
+// function countLettersArray(counter, sample_text){
+
+//   //this part is to do it like an array//
+//   sample_text = sample_text.split('');
+
+
+//   if (sample_text.length === 0){
+//     return counter;
+//   }
+
+//   if (counter.hasOwnProperty(sample_text[0].toLowerCase())){
+//     counter[sample_text[0]]++;
+//   }
+
+//   countLetters(counter, sample_text.slice(1,sample_text.length));
+
+// }
 
 $(document).ready(function(){
   countLetters(counter, sample_text);
